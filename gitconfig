@@ -1,0 +1,26 @@
+[user]
+	email = you@example.com
+	name = Your Name
+[alias]
+        br=branch --list -av
+        brd=branch -D
+        brdm=branch -D master
+        ci=commit -s
+        cia=commit -sa
+        cl=clean -df
+        co=checkout
+        cot=checkout --track
+        dcw=diff --color-words
+        dst=diff --cached
+        fe=fetch --all
+        logs=log --oneline --graph
+        meo=master origin/master
+        pl=pull
+        pom=pull origin master
+        pr=remote prune origin
+        ps=push origin --all
+        pst=push --tags origin
+        re=remote -v
+        st=status
+        sub=submodule
+

@@ -2,11 +2,12 @@
 	email = you@example.com
 	name = Your Name
 [alias]
-        br=branch --list -av
+       	br=branch --list -v
+        bra=branch --list -av
         brd=branch -D
         brdm=branch -D master
-        ci=commit -s
-        cia=commit -sa
+        ci=commit
+        cia=commit -a
         cl=clean -df
         co=checkout
         cot=checkout --track
@@ -21,6 +22,9 @@
         ps=push origin --all
         pst=push --tags origin
         re=remote -v
-        st=status
+        st=status -uno
+        stashpatch=stash push --patch
         sub=submodule
-
+        quickci=commit --amend --no-edit
+        quickfix=commit --fixup HEAD
+        quickrb=rebase -i --autosquash HEAD~2

@@ -6,10 +6,13 @@
         bra=branch --list -av
         brd=branch -D
         brdm=branch -D master
+        brm=branch -m
+        chp=cherry-pick
         ci=commit
         cia=commit -a
         cl=clean -df
         co=checkout
+        cores=checkout HEAD --
         cot=checkout --track
         dcw=diff --color-words
         dst=diff --cached
@@ -20,6 +23,7 @@
         pom=pull origin master
         pr=remote prune origin
         ps=push origin --all
+        psg=push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)
         pst=push --tags origin
         re=remote -v
         st=status -uno

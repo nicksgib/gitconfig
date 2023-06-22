@@ -1,18 +1,23 @@
 [user]
 	email = you@example.com
 	name = Your Name
+[core]
+	editor = nano
+	whitespace = trailing-space,space-before-tab
+[color]
+	ui = true
 [alias]
-       	br=branch --list -v
+        br=branch --list -v
         bra=branch --list -av
         brd=branch -D
         brdm=branch -D master
-        brm=branch -m
-        chp=cherry-pick
+	brm=branch -m
+	chp=cherry-pick
         ci=commit
         cia=commit -a
         cl=clean -df
         co=checkout
-        cores=checkout HEAD --
+	cores=checkout HEAD --
         cot=checkout --track
         dcw=diff --color-words
         dst=diff --cached
@@ -23,12 +28,16 @@
         pom=pull origin master
         pr=remote prune origin
         ps=push origin --all
-        psg=push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)
+	psg=push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)
         pst=push --tags origin
         re=remote -v
         st=status -uno
         stashpatch=stash push --patch
         sub=submodule
-        quickci=commit --amend --no-edit
+	quickci=commit --amend --no-edit
         quickfix=commit --fixup HEAD
         quickrb=rebase -i --autosquash HEAD~2
+[pull]
+	rebase = true
+[safe]
+	directory = *
